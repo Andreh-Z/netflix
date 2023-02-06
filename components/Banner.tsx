@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { baseUrl } from "../constants/movie";
 import { Movie } from "../typings";
 import { FaPlay } from "react-icons/fa";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 interface Props {
   netflixOriginals: Movie[];
