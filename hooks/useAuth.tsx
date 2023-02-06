@@ -39,6 +39,25 @@ export const AuthProvider = ({ children }: AuthproviderProps) => {
   const [initialLoading, setInitialLoading] = useState(true);
   const [loading, setLoading] = useState(false);
 
+  useEffect(
+    () =>
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // Logged in...
+          setUser(user);
+          setLoading(false);
+        } else {
+          // Not logged in...
+          setUser(null);
+          setLoading(true);
+          router.push("/login");
+        }
+
+        setInitialLoading(false);
+      }),
+    [auth]
+  );
+
   const signUp = async (email: string, password: string) => {
     setLoading(true);
 
