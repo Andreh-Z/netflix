@@ -1,3 +1,4 @@
+import { signInAnonymously } from "firebase/auth";
 import Head from "next/head";
 import Image from "next/legacy/image";
 import { useState } from "react";
@@ -18,7 +19,14 @@ function Login() {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {};
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    console.log(data);
+    if (login) {
+      await signIn(data.email, data.password);
+    } else {
+      await signUp(data.email, data.password);
+    }
+  };
 
   return (
     <div className="relative flex h-screen w-screen flex-col bg-black md:items-center md:justify-center md:bg-transparent">
