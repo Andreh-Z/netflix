@@ -41,7 +41,7 @@ export default function Header() {
         </ul>
       </div>
       <div className="flex items-center space-x-4 text-sm font-light">
-        <SearchIcon className="hidden h-6 w-6 sm:inline " />
+        <SearchIcon className="hidden h-6 w-6 sm:inline" />
         <p className="hidden lg:inline">kids</p>
         <BellIcon className="h-6 w-6" />
         <Link href="/account">
