@@ -1,27 +1,20 @@
-# Next.js + Tailwind CSS Example
+# Netflix Clone
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+A complete and responsive clone of the popular streaming platform, Netflix, made with modern web technologies.
 
-## Deploy your own
+## Features
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+- Built with **React**, **Next.js**, and **Material-UI** for a seamless and visually appealing user interface.
+- Incorporates **Emotion (React)** for styling and **HeroIcons (React)** for adding icons to the UI.
+- Implements **React Hook Form** for handling user input and validations.
+- Allows users to play videos with the help of **React Player**.
+- State management is achieved using **Recoil**.
+- Incorporates **Tailwind-scrollbar-hide** for a smooth scrolling experience.
+- Written in **TypeScript** for type safety and enhanced development experience.
+- Uses **Autoprefixer** and **PostCSS** for styling.
+- Built with **Tailwind CSS**, **Tailwind Scrollbar**, and **Tailwind CSS Text Shadow** for adding shadows to text.
+- Login/authentication functionality with **Firebase** for a secure and seamless user experience.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Introduction
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+The aim of this project was to create a clone of the popular streaming platform, Netflix, and make it responsive, visually appealing, and easy to use. With the help of modern web technologies, the project has been designed to meet the user’s expectations and provide them with a seamless streaming experience. The project has been developed using the latest version of React, Next.js, Material-UI, and other technologies, which makes it scalable and secure.
