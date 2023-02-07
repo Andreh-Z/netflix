@@ -34,6 +34,7 @@ const Home = ({
   const { logout, loading } = useAuth();
   const showModal = useRecoilValue(modalState);
 
+  // Problems here
   if (loading) {
     return null;
   }
