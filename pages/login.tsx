@@ -58,7 +58,7 @@ function Login() {
           <label className="inline-block w-full">
             <input
               type="email"
-              placeholder="Email"
+              placeholder="admin@admin.com"
               className={`input ${
                 errors.email && "border-b-2 border-orange-500"
               }`}
@@ -74,7 +74,7 @@ function Login() {
             <input
               type="password"
               {...register("password", { required: true })}
-              placeholder="Password"
+              placeholder="Password: admin"
               className={`input ${
                 errors.password && "border-b-2 border-orange-500"
               }`}
