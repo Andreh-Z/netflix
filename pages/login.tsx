@@ -74,7 +74,7 @@ function Login() {
             <input
               type="password"
               {...register("password", { required: true })}
-              placeholder="Password: admin"
+              placeholder="Password: useradmin"
               className={`input ${
                 errors.password && "border-b-2 border-orange-500"
               }`}
