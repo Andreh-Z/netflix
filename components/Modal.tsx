@@ -25,7 +25,14 @@ import useAuth from "../hooks/useAuth";
 
 export default function Modal() {
   const [showModal, setShowModal] = useRecoilState(modalState);
-  const [movie, setMovie] = useState<Movie | null>(null);
+  const [data, setData] = useState();
+  const [movie, setMovie] = useRecoilState(movieState);
+  const [trailer, setTrailer] = useState("");
+  const [muted, setMuted] = useState(true);
+  const [genres, setGenres] = useState<Genre[]>([]);
+  const [addedToList, setAddedToList] = useState(false);
+  const { user } = useAuth();
+  const [movies, setMovies] = useState<DocumentData[] | Movie[]>([]);
 
   const handleClose = () => {
     setShowModal(false);
@@ -41,9 +48,20 @@ export default function Modal() {
         }/${movie?.id}?api_key=${
           process.env.NEXT_PUBLIC_API_KEY
         }&language=en-US&append_to_response=videos`
-      );
+      ).then((response) => response.json());
+      if (data?.videos) {
+        const index = data.videos.results.findIndex(
+          (element: Element) => element.type === "Trailer"
+        );
+        setTrailer(data.videos?.results[index]?.key);
+      }
+      if (data?.genres) {
+        setGenres(data.genres);
+      }
     }
-  }, []);
+
+    fetchMovie();
+  }, [movie]);
 
   return (
     <MuiModal open={showModal} onClose={handleClose}>
